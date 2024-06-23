@@ -22,7 +22,7 @@ header("location:index.php?page=home");
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b><?php echo $_SESSION['system']['name'] ?> - Admin</b></a>
+    <a href="#"><b><?php echo $_SESSION['system']['name'] ?> - Customer</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -58,7 +58,7 @@ header("location:index.php?page=home");
             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
           <div class="card-tools">
-			
+				<a class="btn btn-block btn-sm btn-default btn-flat border-primary " href="register.php"><i class="fa fa-plus"></i>Register</a>
 			</div>
           <!-- /.col -->
         </div>

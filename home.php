@@ -84,7 +84,7 @@ if($_SESSION['login_type'] != 1)
     $user = $conn->query("SELECT firstname, lastname FROM users WHERE id = '$user_id'")->fetch_assoc();
     $fullname = $user['firstname'] . ' ' . $user['lastname'];
 
-    // Fetch the parcels with matching sender_name
+    // Fetch the parcels with matching recipient_name
     $parcels = $conn->query("SELECT reference_number FROM parcels WHERE recipient_name = '$fullname'");
   ?>
 
@@ -127,6 +127,6 @@ if($_SESSION['login_type'] != 1)
     </div>
   </div>
 <?php endif; ?>
-
+<?php endif; ?>
 
 
