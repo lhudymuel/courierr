@@ -26,7 +26,7 @@ header("location:index.php?page=home");
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="#"><b><?php echo $_SESSION['system']['name'] ?> - Admin</b></a>
+    <a href="#"><b><?php echo $_SESSION['system']['name'] ?> - Customer</b></a>
   </div>
   <!-- /.register-logo -->
   <div class="card card-outline card-primary">
