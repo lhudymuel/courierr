@@ -24,18 +24,29 @@ header("location:index.php?page=home");
   <div class="login-logo">
     <a href="#"><b><?php echo $_SESSION['system']['name'] ?> - Customer</b></a>
   </div>
+
+  <style>
+        .admin-restricted {
+            border: 2px solid red;
+        }
+        .error-message {
+            color: red;
+            
+        }
+</style>
+
   <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body">
-      <form action="" id="login-form">
-        <div class="input-group mb-3">
-          <input type="email" class="form-control" name="email" required placeholder="Email">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+  <div class="card-body login-card-body">
+        <form action="" id="login-form">
+        <div class="error-message" id="error-message"></div>
+            <div class="input-group mb-3">
+                <input type="email" class="form-control" name="email" required placeholder="Email" id="email-input">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
         <div class="input-group mb-3">
           <input type="password" class="form-control" name="password" required placeholder="Password">
           <div class="input-group-append">
@@ -54,9 +65,9 @@ header("location:index.php?page=home");
             </div>
           </div>
           <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-          </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block" id="sign-in-button">Sign In</button>
+            </div>
           <div class="card-tools">
 				<a class="btn btn-block btn-sm btn-default btn-flat border-primary " href="register.php"><i class="fa fa-plus"></i>Register</a>
 			</div>
@@ -76,7 +87,7 @@ header("location:index.php?page=home");
     if($(this).find('.alert-danger').length > 0 )
       $(this).find('.alert-danger').remove();
     $.ajax({
-      url:'ajax.php?action=login',
+      url:'ajax.php?action=logincus',
       method:'POST',
       data:$(this).serialize(),
       error:err=>{
@@ -96,6 +107,26 @@ header("location:index.php?page=home");
   })
   })
 </script>
+
+
+<script>
+        document.getElementById('email-input').addEventListener('input', function(event) {
+            const emailInput = event.target;
+            const errorMessage = document.getElementById('error-message');
+            const signInButton = document.getElementById('sign-in-button');
+            
+            if (emailInput.value.toLowerCase().includes('admin')) {
+                emailInput.classList.add('admin-restricted');
+                errorMessage.textContent = 'Admin accounts are restricted from use.';
+                signInButton.disabled = true; // Disable the button
+            } else {
+                emailInput.classList.remove('admin-restricted');
+                errorMessage.textContent = '';
+                signInButton.disabled = false; // Enable the button
+            }
+        });
+    </script>
+
 <?php include 'footer.php' ?>
 
 </body>
