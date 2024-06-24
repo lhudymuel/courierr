@@ -123,7 +123,7 @@ header("location:index.php?page=home");
             const errorMessage = document.getElementById('error-message');
             const signInButton = document.getElementById('sign-in-button');
             
-            if (!emailInput.value.toLowerCase().endsWith('@admin.com','@gmail.com')) {
+            if (!emailInput.value.toLowerCase().endsWith('@staff.com')) {
                 emailInput.classList.add('domain-restricted');
                 errorMessage.textContent = 'wrong credential for staff';
                 signInButton.disabled = true; // Disable the button

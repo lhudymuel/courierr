@@ -107,24 +107,24 @@ header("location:index.php?page=home");
   })
   })
 </script>
-
-
 <script>
-        document.getElementById('email-input').addEventListener('input', function(event) {
-            const emailInput = event.target;
-            const errorMessage = document.getElementById('error-message');
-            const signInButton = document.getElementById('sign-in-button');
-            
-            if (emailInput.value.toLowerCase().includes('admin')) {
-                emailInput.classList.add('admin-restricted');
-                errorMessage.textContent = 'Admin accounts are restricted from use.';
-                signInButton.disabled = true; // Disable the button
-            } else {
-                emailInput.classList.remove('admin-restricted');
-                errorMessage.textContent = '';
-                signInButton.disabled = false; // Enable the button
-            }
-        });
+    document.getElementById('email-input').addEventListener('input', function(event) {
+        const emailInput = event.target;
+        const errorMessage = document.getElementById('error-message');
+        const signInButton = document.getElementById('sign-in-button');
+        
+        if (emailInput.value.toLowerCase().includes('@admin.com') || emailInput.value.toLowerCase().includes('@staff.com')) {
+            emailInput.classList.add('admin-restricted');
+            errorMessage.textContent = 'Admin and Staff accounts are restricted from use.';
+            signInButton.disabled = true; // Disable the button
+        } else {
+            emailInput.classList.remove('admin-restricted');
+            errorMessage.textContent = '';
+            signInButton.disabled = false; // Enable the button
+        }
+    });
+</script>
+
     </script>
 
 <?php include 'footer.php' ?>
