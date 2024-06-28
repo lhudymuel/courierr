@@ -87,7 +87,7 @@ header("location:index.php?page=home");
     if($(this).find('.alert-danger').length > 0 )
       $(this).find('.alert-danger').remove();
     $.ajax({
-      url:'ajax.php?action=logincus',
+      url:'ajax.php?action=login',
       method:'POST',
       data:$(this).serialize(),
       error:err=>{

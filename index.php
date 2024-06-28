@@ -21,8 +21,9 @@
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
-  <?php include 'topbar.php' ?>
-  <?php include 'sidebar.php' ?>
+  
+<?php include 'topbar.php'; ?>
+<?php include 'sidebar.php';?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -124,10 +125,10 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2024 <a href="">RL</a>.</strong>
-    All rights reserved.
+    <strong>PRIME  DEPOT,<a href=""> 2024</a>.</strong>
+  
     <div class="float-right d-none d-sm-inline-block">
-      <b><?php echo $_SESSION['system']['name'] ?></b>
+     
     </div>
   </footer>
 </div>
