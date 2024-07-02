@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php session_start() ?>
-<?php 
-	if(!isset($_SESSION['login_id']))
-	    header('location:login.php');
-    include 'db_connect.php';
-    ob_start();
-  if(!isset($_SESSION['system'])){
+  <?php session_start() ?>
+  <?php 
+    if(!isset($_SESSION['login_id']))
+        header('location:land.php');
+      include 'db_connect.php';
+      ob_start();
+    if(!isset($_SESSION['system'])){
 
-    $system = $conn->query("SELECT * FROM system_settings")->fetch_array();
-    foreach($system as $k => $v){
-      $_SESSION['system'][$k] = $v;
+      $system = $conn->query("SELECT * FROM system_settings")->fetch_array();
+      foreach($system as $k => $v){
+        $_SESSION['system'][$k] = $v;
+      }
     }
-  }
-  ob_end_flush();
+    ob_end_flush();
 
-	include 'header.php' 
-?>
+    include 'header.php' 
+  ?>
 
-
+<link rel="shortcut icon" href="/primedepot/assets/img/logo.png" type="image/x-icon">
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
   

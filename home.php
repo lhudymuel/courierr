@@ -4,6 +4,8 @@ $twhere ="";
 if($_SESSION['login_type'] != 1)
   $twhere = "  ";
 ?>
+
+<link rel="shortcut icon" href="/primedepot/assets/img/logo.png" type="image/x-icon">
 <!-- Info boxes -->
 <?php if($_SESSION['login_type'] == 1): ?>
         <div class="row">
@@ -24,7 +26,7 @@ if($_SESSION['login_type'] != 1)
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM parcels")->num_rows; ?></h3>
 
-                <p>Total Parcels</p>
+                <p>Total Orders</p>
               </div>
               <div class="icon">
                 <i class="fa fa-boxes"></i>
@@ -45,7 +47,7 @@ if($_SESSION['login_type'] != 1)
           </div>
           <hr>
           <?php 
-              $status_arr = array("Item Accepted by Courier","Collected","Shipped","In-Transit","Arrived At Destination","Out for Delivery","Ready to Pickup","Delivered","Picked-up","Unsuccessfull Delivery Attempt");
+              $status_arr = array("Item Accepted by Strore","Collected","Shipped","In-Transit","Arrived At Destination","Out for Delivery","Ready to Pickup","Delivered","Picked-up","Unsuccessfull Delivery Attempt");
                foreach($status_arr as $k =>$v):
           ?>
           <div class="col-12 col-sm-6 col-md-4">
@@ -208,81 +210,65 @@ if($_SESSION['login_type'] != 1)
 
         <!-- property area -->
         <div class="content-area recent-property" style="padding-bottom: 60px; background-color: rgb(252, 252, 252);">
-            <div class="container">   
-                <div class="row">
-                    <div class="col-md-12  padding-top-40 properties-page">
-                        <div class="col-md-12 "> 
-                            <div class="col-xs-10 page-subheader sorting pl0">
+    <div class="container">   
+        <div class="row">
+            <div class="col-12 padding-top-40 properties-page">
+                <div class="col-12"> 
+                    <div class="page-subheader sorting pl-0">
 
-                               
-                                <div class="items-per-page">
-                              
-                                   
-                                </div><!--/ .items-per-page-->
-                            </div>
+                        <div class="items-per-page">
+                            <!-- Items per page content -->
+                        </div><!--/ .items-per-page-->
+                    </div>
 
-                        </div>
-                        <div class="col-md-12">
-                           </div>
-
-                        <div class="col-md-12 ">          
-                       
-  <?php
-    // Fetch the logged-in user's first name and last name
-    $user_id = $_SESSION['login_id'];
-    $user = $conn->query("SELECT firstname, lastname FROM users WHERE id = '$user_id'")->fetch_assoc();
-    $fullname = $user['firstname'] . ' ' . $user['lastname'];
-
-    // Fetch the parcels with matching recipient_name
-    $parcels = $conn->query("SELECT reference_number FROM parcels WHERE recipient_name = '$fullname'");
-  ?>
-
-
-<?php if ($_SESSION['login_type'] == 2): ?>
-  
-  
-  <div class="col-12">
-    <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">Your Order List</h3>
-      </div>
-      <div class="card-body">
-        <?php
-          // Fetch the logged-in user's first name and last name
-          $user_id = $_SESSION['login_id'];
-          $user = $conn->query("SELECT firstname, lastname FROM users WHERE id = '$user_id'")->fetch_assoc();
-          $fullname = $user['firstname'] . ' ' . $user['lastname'];
-
-          // Fetch the parcels with matching sender_name
-          $parcels = $conn->query("SELECT reference_number FROM parcels WHERE recipient_name = '$fullname'");
-        ?>
-        <?php if ($parcels->num_rows > 0): ?>
-          <table class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th>Reference Number (Copy this and Enter it to tracking number to track your order!)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php while($row = $parcels->fetch_assoc()): ?>
-                <tr>
-                  <td><?php echo $row['reference_number'] ?></td>
-                </tr>
-              <?php endwhile; ?>
-            </tbody>
-          </table>
-        <?php else: ?>
-          <p>Order is not processed or you don't have any orders yet.</p>
-        <?php endif; ?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
-                        </div> 
-                    </div>  
                 </div>
-            </div>
+                <div class="col-12">
+                   <!-- Any additional content can go here -->
+                </div>
+
+                <div class="col-12">
+                    <?php
+                        // Fetch the logged-in user's first name and last name
+                        $user_id = $_SESSION['login_id'];
+                        $user = $conn->query("SELECT firstname, lastname FROM users WHERE id = '$user_id'")->fetch_assoc();
+                        $fullname = $user['firstname'] . ' ' . $user['lastname'];
+
+                        // Fetch the parcels with matching recipient_name
+                        $parcels = $conn->query("SELECT reference_number FROM parcels WHERE recipient_name = '$fullname'");
+                    ?>
+
+                    <?php if ($_SESSION['login_type'] == 2): ?>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Your Order List</h3>
+                            </div>
+                            <div class="card-body">
+                                <?php if ($parcels->num_rows > 0): ?>
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Reference Number (Copy this and Enter it to tracking number to track your order!)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php while($row = $parcels->fetch_assoc()): ?>
+                                                <tr>
+                                                    <td><?php echo $row['reference_number'] ?></td>
+                                                </tr>
+                                            <?php endwhile; ?>
+                                        </tbody>
+                                    </table>
+                                <?php else: ?>
+                                    <p>Order is not processed or you don't have any orders yet.</p>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div> 
+            </div>  
         </div>
+    </div>
+</div>
 
 
           <!-- Footer area-->

@@ -19,7 +19,7 @@ header("location:index.php?page=home");
 
 ?>
 <?php include 'header.php' ?>
-
+<link rel="shortcut icon" href="/primedepot/assets/img/logo.png" type="image/x-icon">
 
 <style>
         .domain-restricted {
@@ -29,15 +29,39 @@ header("location:index.php?page=home");
             color: red;
             margin-top: 10px;
         }
-    </style>
+        .close-button {
+        		position: absolute;
+       			top: 0;
+        		right: 0;
+        		width: 2rem;
+        		height: 2rem;
+        		background-color: #ccc;
+        		border: none;
+        		color: #fff;
+        		font-size: 1rem;
+        		cursor: pointer;
+        		}
+        		:hover.close-button{
+          		background-color: red;
+        		}
+        		.cls{
+          		padding: 5px;
+        		}
 
+    </style>
+<button class="close-button" onclick="window.location.href='land.php'">&times;</button>
+
+
+ </div> 
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b><?php echo $_SESSION['system']['name'] ?> - Admin</b></a>
+    <a href="#"> Admin</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
+
+  <img src="\primedepot\assets\img\logo.png" alt="logo" style=" position: relative; padding-top: 40px;">
         <div class="card-body login-card-body">
         <div class="error-message" id="error-message"></div>
             <form action="" id="login-form">

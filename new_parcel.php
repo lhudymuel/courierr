@@ -3,6 +3,41 @@
   textarea{
     resize: none;
   }
+  @media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+      background-color: white;
+    }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr {
+      margin: 0 0 1rem 0;
+    }
+    tr:nth-child(odd) {
+      background: #ccc;
+    }
+    td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+    }
+    td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      content: attr(data-label);
+      text-align: left;
+    }
+  }
+</style>
 </style>
 <div class="col-lg-12">
 	<div class="card card-outline card-primary">
@@ -83,8 +118,9 @@
             </div>
           </div>
         </div>
+
         <hr>
-        <b>Parcel Information</b>
+        <b>Order Information</b>
         <table class="table table-bordered" id="parcel-items">
           <thead>
             <tr>

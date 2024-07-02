@@ -69,7 +69,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" style="height: 200%; width: Auto;"alt=""></a>
+                    <a class="navbar-brand" href="land.html"><img src="assets/img/logo.png" style="height: 200%; width: Auto;"alt=""></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,20 +78,20 @@
                     
                         <button class="navbar-btn nav-button wow bounceInRight login"  class="dropdown-toggle active" data-toggle="dropdown" data-hover="dropdown" data-wow-delay="0.4s">Login as</button>
                     
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu button navbar-left">
                                 <li>
-                                    <a href="#">Customer</a>
+                                    <a href="logincus.php">Customer</a>
                                 </li>
                                 <li>
-                                    <a href="#">Admin</a>
+                                    <a href="login.php">Admin</a>
                                 </li>
                                 <li>
-                                    <a href="#">Staff</a>
+                                    <a href="loginstaff.php">Staff</a>
                                 </li>
                             </ul>
                     </div>
                     <ul class="main-nav nav navbar-nav navbar-right">
-                        <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="index.php">Home</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="land.php">Home</a></li>
                         <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="about.php">About Us</a></li>
                         <li class="wow fadeInDown" data-wow-delay="0.4s"><a href="contact.php">Contact</a></li>
                     </ul>
@@ -186,7 +186,7 @@
                     <h4>Quick links </h4>
                     <div class="footer-title-line"></div>
                     <ul class="footer-menu">
-                        <li><a href="index.php.php">Home</a>  </li> 
+                        <li><a href="land.php.php">Home</a>  </li> 
                         <li><a href="about.php">About Us</a>  </li> 
                         <li><a href="contact.php">Contact us</a></li>
                     </ul>
@@ -204,7 +204,7 @@
                         </div> 
                         <div class="bottom-menu pull-right"> 
                             <ul> 
-                                <li><a class="wow fadeInUp animated" href="index.php" data-wow-delay="0.2s">Home</a></li>
+                                <li><a class="wow fadeInUp animated" href="land.php" data-wow-delay="0.2s">Home</a></li>
                                 <li><a class="wow fadeInUp animated" href="about.php" data-wow-delay="0.3s">About Us</a></li>
                                 <li><a class="wow fadeInUp animated" href="contact.php" data-wow-delay="0.4s">Contact</a></li>
                             </ul> 

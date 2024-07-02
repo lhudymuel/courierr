@@ -3,7 +3,7 @@
 		<input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
 		<div class="form-group">
 			<label for="">Update Status</label>
-			<?php $status_arr = array("Item Accepted by Courier","Collected","Shipped","In-Transit","Arrived At Destination","Out for Delivery","Ready to Pickup","Delivered","Picked-up","Unsuccessfull Delivery Attempt"); ?>
+			<?php $status_arr = array("Item Accepted by Store","Collected","Shipped","In-Transit","Arrived At Destination","Out for Delivery","Ready to Pickup","Delivered","Picked-up","Unsuccessfull Delivery Attempt"); ?>
 			<select name="status" id="" class="custom-select custom-select-sm">
 				<?php foreach($status_arr as $k => $v): ?>
 					<option value="<?php echo $k ?>" <?php echo $_GET['cs'] == $k ? "selected" :'' ?>><?php echo $v; ?></option>
@@ -40,7 +40,7 @@
 			},
 			success:function(resp){
 				if(resp==1){
-					alert_toast("Parcel's Status successfully updated",'success');
+					alert_toast("Order, Status successfully updated",'success');
 					setTimeout(function(){
 						location.reload()
 					},750)

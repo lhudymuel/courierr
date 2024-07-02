@@ -71,7 +71,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" style="height: 200%; width: Auto;"alt=""></a>
+                    <a class="navbar-brand" href="land.html"><img src="assets/img/logo.png" style="height: 200%; width: Auto;"alt=""></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,20 +80,20 @@
                     
                         <button class="navbar-btn nav-button wow bounceInRight login"  class="dropdown-toggle active" data-toggle="dropdown" data-hover="dropdown" data-wow-delay="0.4s">Login as</button>
                     
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu button navbar-left">
                                 <li>
-                                    <a href="#">Customer</a>
+                                    <a href="logincus.php">Customer</a>
                                 </li>
                                 <li>
-                                    <a href="#">Admin</a>
+                                    <a href="login.php">Admin</a>
                                 </li>
                                 <li>
-                                    <a href="#">Staff</a>
+                                    <a href="loginstaff.php">Staff</a>
                                 </li>
                             </ul>
                     </div>
                     <ul class="main-nav nav navbar-nav navbar-right">
-                        <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="index.php">Home</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="land.php">Home</a></li>
                         <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="about.php">About Us</a></li>
                         <li class="wow fadeInDown" data-wow-delay="0.4s"><a href="contact.php">Contact</a></li>
                     </ul>
@@ -494,7 +494,7 @@ img {
   <ul class="cards">
     <li class="cards_item">
       <div class="card">
-        <div class="card_image"><img src="\land\assets\img\team\Devine.jpg"></div>
+        <div class="card_image"><img src="/primedepot/assets/img/team/Devine.jpg" alt="Devine"></div>
         <div class="card_content">
           <h2 class="card_title">Devine Andal</h2>
           <p class="card_text">Position</p>
@@ -509,7 +509,7 @@ img {
     </li>
     <li class="cards_item">
       <div class="card">
-        <div class="card_image"><img src="\land\assets\img\team\Joshua.jpg"></div>
+        <div class="card_image"><img src="/primedepot/assets/img/team/Joshua.jpg"></div>
         <div class="card_content">
           <h2 class="card_title">Joshua Bien Arellano</h2>
           <p class="card_text">Position</p>
@@ -524,7 +524,7 @@ img {
     </li>
     <li class="cards_item">
       <div class="card">
-        <div class="card_image"><img src="\land\assets\img\team\Kryslen.jpg"></div>
+        <div class="card_image"><img src="/primedepot/assets/img/team/Kryslen.jpg"></div>
         <div class="card_content">
           <h2 class="card_title">Kryslen Datinguinoo</h2>
           <p class="card_text">Position</p>
@@ -539,7 +539,7 @@ img {
     </li>
     <li class="cards_item">
       <div class="card">
-        <div class="card_image"><img src="\land\assets\img\team\Mark.jpg"></div>
+        <div class="card_image"><img src="/primedepot/assets/img/team/Mark.jpg"></div>
         <div class="card_content">
           <h2 class="card_title">Mark Kirveen Candava</h2>
           <p class="card_text">Position</p>
@@ -554,7 +554,7 @@ img {
     </li>
     <li class="cards_item">
       <div class="card">
-        <div class="card_image"><img src="\land\assets\img\team\Princess.jpg"></div>
+        <div class="card_image"><img src="/primedepot/assets/img/team/Princess.jpg"></div>
         <div class="card_content">
           <h2 class="card_title">Princess Aira Zhyne Candava</h2>
           <p class="card_text">Position</p>
@@ -600,7 +600,7 @@ img {
                                 <h4>Quick links </h4>
                                 <div class="footer-title-line"></div>
                                 <ul class="footer-menu">
-                                    <li><a href="index.php.php">Home</a>  </li> 
+                                    <li><a href="land.php">Home</a>  </li> 
                                     <li><a href="about.php">About Us</a>  </li> 
                                     <li><a href="contact.php">Contact us</a></li>
                                 </ul>
@@ -618,7 +618,7 @@ img {
                         </div> 
                         <div class="bottom-menu pull-right"> 
                             <ul> 
-                                <li><a class="wow fadeInUp animated" href="index.php" data-wow-delay="0.2s">Home</a></li>
+                                <li><a class="wow fadeInUp animated" href="land.php" data-wow-delay="0.2s">Home</a></li>
                                 <li><a class="wow fadeInUp animated" href="about.php" data-wow-delay="0.3s">About Us</a></li>
                                 <li><a class="wow fadeInUp animated" href="contact.php" data-wow-delay="0.4s">Contact</a></li>
                             </ul> 

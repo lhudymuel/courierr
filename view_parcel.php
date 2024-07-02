@@ -53,7 +53,7 @@ $branch = array();
 			</div>
 			<div class="col-md-6">
 				<div class="callout callout-info">
-					<b class="border-bottom border-primary">Parcel Details</b>
+					<b class="border-bottom border-primary">Order Details</b>
 						<div class="row">
 							<div class="col-sm-6">
 								<dl>
@@ -77,7 +77,7 @@ $branch = array();
 							</div>
 						</div>
 					<dl>
-						<dt>Branch Accepted the Parcel:</dt>
+						<dt>Branch Accepted the Orders:</dt>
 						<dd><?php echo ucwords($branch[$from_branch_id]) ?></dd>
 						<?php if($type == 2): ?>
 							<dt>Nearest Branch to Recipient for Pickup:</dt>

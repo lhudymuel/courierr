@@ -100,7 +100,7 @@
                 </a>
               </li>
               <?php 
-              $status_arr = array("Item Accepted<br/>by Courier","Collected","Shipped","In-Transit","Arrived At<br/>Destination","Out for Delivery","Ready to Pickup","Delivered","Picked-up","Unsuccessfull<br/>Delivery Attempt");
+              $status_arr = array("Item Accepted<br/>by Store","Collected","Shipped","In-Transit","Arrived At<br/>Destination","Out for Delivery","Ready to Pickup","Delivered","Picked-up","Unsuccessfull<br/>Delivery Attempt");
               foreach($status_arr as $k =>$v):
               ?>
               <li class="nav-item">
